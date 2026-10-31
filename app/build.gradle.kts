@@ -5,7 +5,7 @@ plugins {
 }
 android {
     namespace = "com.aysha.ai"
-    compileSdk = 35
+    compileSdk = 36
     defaultConfig {
         applicationId = "com.aysha.ai"
         minSdk = 26
