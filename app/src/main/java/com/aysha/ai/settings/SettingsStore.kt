@@ -3,7 +3,7 @@ import android.content.Context
 class SettingsStore(context: Context) {
     private val p = context.getSharedPreferences("aysha_settings", Context.MODE_PRIVATE)
     var model: String
-        get() = p.getString("model", "gemini-2.5-flash") ?: "gemini-2.5-flash"
+        get() = p.getString("model", "gemini-3.8-flash") ?: "gemini-3.8-flash"
         set(v) { p.edit().putString("model", v).apply() }
     var voice: Boolean
         get() = p.getBoolean("voice", true)

@@ -163,7 +163,7 @@ private fun AyshaHome() {
                 },
                 confirmButton = {
                     TextButton(onClick = {
-                        secure.save(key.trim()); prefs.model = model.trim().ifBlank { "gemini-2.5-flash" }
+                        secure.save(key.trim()); prefs.model = model.trim().ifBlank { "gemini-3.8-flash" }
                         prefs.voice = voiceOn; settingsOpen = false
                     }) { Text("Save") }
                 },

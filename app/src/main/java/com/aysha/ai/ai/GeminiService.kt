@@ -20,7 +20,7 @@ class GeminiService : AIProvider {
         withContext(Dispatchers.IO) {
             runCatching {
                 require(apiKey.isNotBlank()) { "Settings-এ Gemini API Key দিন।" }
-                val modelName = model.ifBlank { "gemini-2.5-flash" }
+                val modelName = model.ifBlank { "gemini-3.8-flash" }
                 val url = "https://generativelanguage.googleapis.com/v1beta/models/$modelName:generateContent?key=$apiKey"
                 val system = "You are AYSHA, a friendly, intelligent and polite AI assistant. Support Bengali and English. Reply in the user's language. Be helpful and natural. You are an AI, not a human."
                 val parts = org.json.JSONArray().put(JSONObject().put("text", "$system\n\nUser: $prompt"))
